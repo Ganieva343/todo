@@ -1,0 +1,18 @@
+{% extends 'list_page.html' %}
+
+{% block content %}
+
+<div style="margin-top: 50px;" class="ui container">
+   <h1 class="ui center aligned header">Редактировать задачу</h1>
+   <form class="ui form" action="/update/{{ todo.id }}" method="post">
+       <div class="field">
+           <label>Название задачи</label><br>
+           <input type="text" name="title" value="{{ todo.title }}"><br>
+           <label>Описание</label><br>
+           <textarea name="description">{{ todo.description }}</textarea><br>
+       </div>
+       <button class="ui teal basic button" type="submit">Сохранить</button>
+   </form>
+</div>
+
+{% endblock content %}

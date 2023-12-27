@@ -1,0 +1,24 @@
+{% extends 'list_page.html' %}
+
+{% block content %}
+
+
+<div style="margin-top: 50px;" class="ui container">
+    <h1 class="ui center aligned header">Список дел</h1>
+
+    <button class="ui teal basic button" onclick="window.location.href='/add_task'" type="submit">Новая задача</button>
+
+
+    {% for todo in tasks %}
+    <div class="ui segment">
+       <p class="ui big header">№{{ todo.id }} {{ todo.title }}</p>
+        <a class="ui primary basic button" href="/view/{{ todo.id }}">Просмотреть</a>
+        <a class="ui primary basic button" onclick="window.location.href='/edit.task'" href="/update/{{ todo.id }}">Редактировать</a>
+         <a class="ui negative basic button" href="/delete/{{ todo.id }}">Удалить</a>
+
+</div>
+    {% endfor %}
+
+</div>
+{% endblock content %}
+

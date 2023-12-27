@@ -1,0 +1,19 @@
+{% extends 'list_page.html' %}
+
+{% block content %}
+
+
+<div style="margin-top: 50px;" class="ui container">
+    <h1 class="ui center aligned header">Новая задача</h1>
+    <form class="ui form" action="/add" method="post">
+        <div class="field">
+            <label>Название задачи</label><br>
+            <input type="text" name="title" placeholder="Введите название задачи"><br>
+            <label>Описание</label><br>
+            <textarea name="description"></textarea><br>
+        </div>
+        <button class="ui teal basic button" type="submit">Добавить</button>
+    </form>
+</div>
+{% endblock content %}
+

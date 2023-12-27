@@ -1,0 +1,14 @@
+{% extends 'list_page.html' %}
+
+{% block content %}
+
+<div style="margin-top: 50px;" class="ui container">
+  <h1 class="ui center aligned header">Просмотр задачи</h1>
+  <h2>{{ todo.title }}</h2>
+  <p>{{ todo.description }}</p>
+
+  <a class="ui teal basic button" href="/update/{{ todo.id }}">Редактировать</a>
+  <a class="ui negative basic button" href="/delete/{{ todo.id }}">Удалить</a>
+</div>
+
+{% endblock content %}
